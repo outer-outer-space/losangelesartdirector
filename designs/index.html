@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156938390-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-156938390-1');
+	</script>
+    <meta charset="utf-8">
+    <title>Eric Palmer's Designs | Los Angeles Art Director</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eric Palmer is an art director for film based in Los Angeles, CA. Along with art direction, he specializes in set construction, graphic design, and music.">
+	<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css?family=Germania+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+		html, body {
+			background: #FFEDE8;
+			font-family: 'Work Sans', sans-serif;
+			font-size: 17px;
+			height: 100vh;
+		}
+		body {
+			padding: 40px;
+			cursor: url('../img/cursor.png'), auto;	
+		}
+		a:hover,
+		img:hover {
+			cursor: url('../img/cursor-hover.png'), auto;	
+		}
+		header {
+			margin-top: -7px;
+			display: block;
+			width: 100%;
+			height: 100px;
+		}
+		.header-inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+		.header-h1-link {
+			font-family: 'Germania One', serif;
+			font-size: 45px;
+			color: #0047FF;
+			margin: 0;
+			text-decoration: none;
+		}
+		.header-h1-link:hover {
+			color: #00288D;
+		}
+		.navigation {
+			padding: 0;
+			margin: 0;
+		}
+		.navigation-item {
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 20px;
+			background-image: linear-gradient(#FFEDE8 60%, #FFC6BA 55%);
+		}
+		.navigation-item:last-child {
+			margin-right: 0;
+		}
+		.navigation-link {
+			font-size: 15px;
+			color: #0047FF;
+			font-weight: 500;
+			text-decoration: none;
+		}
+		.navigation-link:hover {
+			color: #00288D;
+			background-image: linear-gradient(#FFEDE8 60%, #fca1a1 55%);
+		}
+		.gallery {
+			width: 100%;
+			column-width: 200px;
+			column-gap: 5px;
+			padding: 5px;
+			display: block;
+		}
+		.gallery img {
+			width: 100%;
+			cursor: pointer;
+		}
+		.lightbox {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			display: none;
+			background: #7f8c8d;
+			perspective: 1000;
+		}
+		
+		.filter {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			filter: blur(20px);
+			opacity: 0.5;
+			background-position: center;
+			background-size: cover;
+		}
+		
+		.lightbox img {
+			position: absolute;
+			top: 50%;
+			left: 49%;
+			transform: translate(-50%, -50%) rotateY(0deg);
+			max-height: 95vh;
+			max-width: calc(95vw - 100px);
+			transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
+			transform-style: preserve-3d;
+		}
+		
+		/*.lightbox:hover img{
+		  transform: translate(-50%, -50%) rotateY(180deg);
+		}*/
+		
+		[class^="arrow"] {
+			height: 90px;
+			width: 10px;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+		}
+		
+		[class^="arrow"]:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-60%, -50%) rotate(-45deg);
+			width: 15px;
+			height: 15px;
+		}
+		
+		.arrowr {
+			padding: 20px;
+			right: 50px;
+		}
+		
+		.arrowr:after {
+			border-right: 1px solid white;
+			border-bottom: 1px solid white;
+		}
+		
+		.arrowl {
+			left: 0;
+			padding: 20px;
+		}
+		
+		.arrowl:after {
+			border-left: 1px solid white;
+			border-top: 1px solid white;
+		}
+		
+		.close {
+			position: absolute;
+			right: 50px;
+			width: 10px;
+			height: 10px;
+			background: rgba(0, 0, 0, 0.4);
+			margin: 20px;
+			cursor: pointer;
+			padding: 10px;
+		}
+		
+		.close:after,
+		.close:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1px;
+			height: 100%;
+			background: #e74c3c;
+		}
+		
+		.close:after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		
+		.close:before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		
+		.title {
+			font-size: 20px;
+			color: #000;
+			z-index: 1000;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		footer {
+			display: block;
+			width: 100%;
+		}
+		.footer-inner {
+			display: flex;
+			justify-content: space-between;
+		}
+		.footer-link {
+			font-size: 15px;
+			color: #0047FF;
+			font-weight: 500;
+			text-decoration: none;
+			background-image: linear-gradient(#FFEDE8 60%, #FFC6BA 55%);
+		}
+		.footer-link:hover {
+			color: #00288D;
+			background-image: linear-gradient(#FFEDE8 60%, #fca1a1 55%);
+		}
+		.footer-link-rotated {
+			transform: rotate(-90deg);
+			/* Safari */
+			-webkit-transform: rotate(-90deg);			
+			/* Firefox */
+			-moz-transform: rotate(-90deg);			
+			/* IE */
+			-ms-transform: rotate(-90deg);			
+			/* Opera */
+			-o-transform: rotate(-90deg);			
+			/* Internet Explorer */
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+			margin-left: 50px;
+		}
+		.footer-link-horizontal {
+			margin-top: 160px;
+			margin-bottom: 40px;			
+			text-align: left;
+			position: inherit;
+		}
+		.footer-img {
+			margin-right: 100px;
+			display: inline-block;
+		}
+	    @media (max-width : 640px) {
+			.navigation-link {
+				font-size: 13px;
+			}
+	    }
+	    @media (max-width : 440px) {
+			body {
+				padding: 20px;
+			}
+			.header-h1-link {
+				font-size: 32px;
+			}
+			.navigation-item {
+				display: block;
+			}
+			.navigation-link {
+				font-size: 12px;
+			}
+	    }
+	</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-inner">
+				<a class="header-h1 header-h1-link" href="../">Eric Palmer</a>
+				<nav>
+					<ul class="navigation">
+						<!--<li class="navigation-item"><a class="navigation-link" href="#"><strong>Video Reel</strong></a></li>-->
+						<li class="navigation-item"><a class="navigation-link" href="../set-photos/">Set Photos</a></li>
+						<li class="navigation-item"><a class="navigation-link" href="#"><strong>Designs</strong></a></li>
+						<li class="navigation-item"><a class="navigation-link" href="../about/">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="gallery">
+			<img src="../img/designs/1-lichtenstein-living-room-set-rendering.jpg" alt="Lichtenstein living room set rendering" />
+			<img src="../img/designs/2-living-room-set-rendering.jpg" alt="Living room set rendering" />
+			<img src="../img/designs/3-modular-interchangeable-set-rendering.jpg" alt="Modular interchangeable geometric set rendering" />
+			<img src="../img/designs/4-retro-diner-set-rendering.jpg" alt="Retro diner set rendering" />
+			<img src="../img/designs/5-cave-with-throne-set-rendering.jpg" alt="Cave with throne set rendering" />
+			<img src="../img/designs/6-asos-set-rendering.jpg" alt="ASOS set rendering" />
+			<img src="../img/designs/7-cave-set-rendering.jpg" alt="Cave set rendering" />
+			<img src="../img/designs/8-gabriels-inferno-rendering.jpg" alt="Gabriel's Inferno set rendering" />
+			<img src="../img/designs/9-step-stair-shelf-set-rendering.jpg" alt="Step stair shelf set rendering" />
+			<img src="../img/designs/10-throne-set-rendering.jpg" alt="Throne set rendering" />
+			<img src="../img/designs/11-throne-set-rendering.jpg" alt="Throne set rendering" />
+			<img src="../img/designs/12-gabriels-inferno-set-rendering.jpg" alt="Gabriel's Inferno set rendering" />
+			<img src="../img/designs/13-gabriels-inferno-dragon-tattoo.jpg" alt="Gabriel's Inferno dragon tattoo drawing" />
+			<img src="../img/designs/14-kitchen-counter-set-rendering.jpg" alt="Kitchen counter set rendering" />
+			<img src="../img/designs/15-more-stage-set-rendering.jpg" alt="Stage set rendering" />
+			<img src="../img/designs/16-more-party-set-rendering.jpg" alt="Party set rendering" />
+			<img src="../img/designs/17-asos-set-rendering.jpg" alt="ASOS set rendering" />
+			<img src="../img/designs/18-asos-set-rendering.jpg" alt="ASOS set rendering" />
+			<img src="../img/designs/19-pout-desk-set-rendering.jpg" alt="Pout desk set rendering" />
+			<img src="../img/designs/21-sci-fi-set-drawing.jpg" alt="Sci-fi set drawing" />
+			<img src="../img/designs/22-fireplace-stairs-set-rendering.jpg" alt="Fireplace stairs set rendering" />
+			<img src="../img/designs/20-sexual-time-traveling-pixies.jpg" alt="Sexual Time Traveling Pixies artwork" />
+		</section>
+		<div class="lightbox">
+			<div class="title"></div>
+			<div class="filter"></div>
+			<div class="arrowr"></div>
+			<div class="arrowl"></div>
+			<div class="close"></div>
+		</div>		
+		<footer>
+			<div class="footer-links footer-inner">
+				<div class="footer-link-rotated">
+					<a class="footer-link" href="tel:4807104417">Call Me</a>
+				</div>
+				<div class="footer-link-horizontal">
+					<a class="footer-link" href="mailto:eric@losangelesartdirector.com">Email Me</a>
+				</div>
+			</div>
+		</footer>
+		<script>
+			$(window).load(function() {
+			
+			  $("section img").click(function() {
+			    $(".lightbox").fadeIn(300);
+			    $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+			    $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+			    /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+			    $("html").css("overflow", "hidden");
+			    if ($(this).is(":last-child")) {
+			      $(".arrowr").css("display", "none");
+			      $(".arrowl").css("display", "block");
+			    } else if ($(this).is(":first-child")) {
+			      $(".arrowr").css("display", "block");
+			      $(".arrowl").css("display", "none");
+			    } else {
+			      $(".arrowr").css("display", "block");
+			      $(".arrowl").css("display", "block");
+			    }
+			  });
+			
+			  $(".close").click(function() {
+			    $(".lightbox").fadeOut(300);
+			    $("h1").remove();
+			    $(".lightbox img").remove();
+			    $("html").css("overflow", "auto");
+			  });
+			
+			  $(document).keyup(function(e) {
+			    if (e.keyCode == 27) {
+			      $(".lightbox").fadeOut(300);
+			      $(".lightbox img").remove();
+			      $("html").css("overflow", "auto");
+			    }
+			  });
+			
+			  $(".arrowr").click(function() {
+			    var imgSrc = $(".lightbox img").attr("src");
+			    var search = $("section").find("img[src$='" + imgSrc + "']");
+			    var newImage = search.next().attr("src");
+			    /*$(".lightbox img").attr("src", search.next());*/
+			    $(".lightbox img").attr("src", newImage);
+			    $(".filter").css("background-image", "url(" + newImage + ")");
+			
+			    if (!search.next().is(":last-child")) {
+			      $(".arrowl").css("display", "block");
+			    } else {
+			      $(".arrowr").css("display", "none");
+			    }
+			  });
+			
+			  $(".arrowl").click(function() {
+			    var imgSrc = $(".lightbox img").attr("src");
+			    var search = $("section").find("img[src$='" + imgSrc + "']");
+			    var newImage = search.prev().attr("src");
+			    /*$(".lightbox img").attr("src", search.next());*/
+			    $(".lightbox img").attr("src", newImage);
+			    $(".filter").css("background-image", "url(" + newImage + ")");
+			
+			    if (!search.prev().is(":first-child")) {
+			      $(".arrowr").css("display", "block");
+			    } else {
+			      $(".arrowl").css("display", "none");
+			    }
+			  });
+			
+			});			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156938390-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-156938390-1');
+	</script>
+    <meta charset="utf-8">
+    <title>Eric Palmer | Los Angeles Art Director</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Eric Palmer is an art director for film based in Los Angeles, CA. Along with art direction, he specializes in set design, set construction, graphic design, and music.">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css?family=Germania+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,800&display=swap" rel="stylesheet">
+    <style>
+		html, body {
+			background: #FFEDE8;
+			background-image: url('img/interstellar-slow.svg');
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			font-family: 'Work Sans', sans-serif;
+			font-size: 17px;
+			height: 100vh;
+		}
+		body {
+			padding: 40px;
+			cursor: url('img/cursor.png'), auto;	
+		}
+		a:hover {
+			cursor: url('img/cursor-hover.png'), auto;	
+		}
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-top: -30px;
+		}
+		.header-h1-link {
+			font-family: 'Germania One', serif;
+			font-size: 45px;
+			color: #0047FF;
+			margin: 0;
+			text-decoration: none;
+		}
+		.header-h1-link:hover {
+			color: #00288D;
+		}
+		.navigation {
+			padding: 0;
+			margin: 0;
+		}
+		.navigation-item {
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 20px;
+			background-image: linear-gradient(#FFEDE8 60%, #FFC6BA 55%);
+		}
+		.navigation-item:last-child {
+			margin-right: 0;
+		}
+		.navigation-link {
+			font-size: 15px;
+			color: #0047FF;
+			font-weight: 500;
+			text-decoration: none;
+		}
+		.navigation-link:hover {
+			color: #00288D;
+			background-image: linear-gradient(#FFEDE8 60%, #fca1a1 55%);
+		}
+		.pull-out {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			overflow-x: hidden;
+			transition: 0.3s;
+			transition-timing-function: ease-in;
+  			display: flex;
+			flex-direction: column;
+		}
+		#mains {
+		  transition: margin-right: 1s;
+		}
+		.hero {
+			max-width: 970px;
+			margin: 0 auto;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+		}
+		.hero-headline {
+			letter-spacing: -0.03em;
+			color: #FFC6BA;
+			font-size: 156px;
+			font-family: 'Germania One';
+			background-image: linear-gradient(#FFEDE8 90%, #FFEDE8 35%);
+			display: inline;
+		}
+		.hero-headline-first-line {
+			background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);
+		}
+		.hero-headline-spacing {
+			margin-left: 250px;
+			background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);
+		}
+		footer {
+			width: 100%;
+			position:fixed;
+			left: 50px;
+			bottom: 50px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-top: -110px;	
+			z-index: 0;
+		}
+		.footer-link {
+			font-size: 15px;
+			color: #0047FF;
+			font-weight: 500;
+			text-decoration: none;
+			background-image: linear-gradient(#FFEDE8 60%, #FFC6BA 55%);
+		}
+		.footer-link:hover {
+			color: #00288D;
+			background-image: linear-gradient(#FFEDE8 60%, #fca1a1 55%);
+		}
+		.footer-link-rotated {
+			transform: rotate(-90deg);
+			/* Safari */
+			-webkit-transform: rotate(-90deg);			
+			/* Firefox */
+			-moz-transform: rotate(-90deg);			
+			/* IE */
+			-ms-transform: rotate(-90deg);			
+			/* Opera */
+			-o-transform: rotate(-90deg);			
+			/* Internet Explorer */
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+			margin-left: -110px;
+		}
+		.footer-link-horizontal {
+			margin-top: 100px;
+			margin-left: 0px;
+		}
+		.footer-img {
+			margin-right: 100px;
+		}
+		.closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			margin-left: 50px;
+			color: #ffffff;
+		}
+		.arrow:hover {
+			cursor: url('img/cursor-hover.png'), auto;	
+		}
+		
+	    @media (max-width : 1045px) {
+	    	.hero-headline {
+		    	font-size: 100px;
+			    margin-top: 150px;
+		    }
+		    .hero-headline-spacing {
+			    margin-left: 0;
+			    display: block;
+		    }
+		    .arrow {
+			    margin-top: 70px;
+			    margin-left: 50px;
+		    }
+	    }
+	    @media (max-width : 640px) {
+			.navigation-link {
+				font-size: 13px;
+			}
+	    }
+	    @media (max-width : 600px) {
+	    	.hero-headline {
+		    	font-size: 75px;
+			    margin-top: 50px;
+		    }
+		    .arrow {
+			    margin-top: 20px;
+			    margin-left: 20px;
+		    }
+	    }
+		@media screen and (max-height: 450px) {
+		  .pull-out {
+			  padding-top: 15px;
+			  }
+		}
+	    @media (max-width : 470px) {
+			body {
+				padding: 15px;
+			}
+			.header-h1-link {
+				font-size: 32px;
+			}
+	    	.hero-headline {
+		    	font-size: 50px;
+			    margin-top: 100px;
+		    }
+			.navigation-item {
+				display: block;
+			}
+			.navigation-link {
+				font-size: 12px;
+			}
+	    }
+	    @media (max-width : 360px) {
+	    	.hero-headline {
+		    	font-size: 38px;
+			    margin-top: 100px;
+		    }
+	    }
+	</style>
+	</head>
+	<body>
+		<section  id="mySidenav" class="pull-out sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<img src="img/home/1-pool-set.jpg" alt="Pool film set">
+			<img src="img/home/2-music-video-set.jpg" alt="Music video film set">
+			<img src="img/home/3-viacom-set-b.jpg" alt="Living room film set">
+			<img src="img/home/4-space-ship-set.jpg" alt="Souls space ship film set">
+			<img src="img/home/5-viacom-set-a.jpg" alt="Living room film set">
+			<img src="img/home/6-viacom-set-d.jpg" alt="Diner film set">
+		</section>
+
+		<section class="main" id="mains">
+			<header>
+				<h1 class="header-h1"><a class="header-h1-link" href="#">Eric Palmer</a></h1>
+				<nav>
+					<ul class="navigation">
+						<!--<li class="navigation-item"><a class="navigation-link" href="#"><strong>Video Reel</strong></a></li>-->
+						<li class="navigation-item"><a class="navigation-link" href="set-photos/">Set Photos</a></li>
+						<li class="navigation-item"><a class="navigation-link" href="designs/">Designs</a></li>
+						<li class="navigation-item"><a class="navigation-link" href="about/">About</a></li>
+					</ul>
+				</nav>
+			</header>
+		
+			<section class="hero">
+				<h1 class="hero-headline"><span class="hero-headline-first-line">Los Angeles</span> <span class="hero-headline-spacing">Art Director</h1>
+				<img id="openArrow" class="arrow" src="img/arrow.svg" alt="arrow" onclick="openNav()">
+			</section>
+			
+			<footer>
+				<div class="footer-links">
+					<div class="footer-link-rotated">
+						<a class="footer-link" href="tel:4807104417">Call Me</a>
+					</div>
+					<div class="footer-link-horizontal">
+						<a class="footer-link" href="mailto:eric@losangelesartdirector.com">Email Me</a>
+					</div>
+				</div>
+				<img class="footer-img" src="img/lizard.svg" alt="Lizard illustration">
+			</footer>
+		</section>
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "276px";
+				document.getElementById("mains").style.marginLeft = "-276px";
+				document.getElementById("openArrow").style.visibility = "hidden";
+			}			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("mains").style.marginLeft = "0px";			
+				document.getElementById("openArrow").style.visibility = "visible";
+			}
+		</script>
+	</body>
+</html>
