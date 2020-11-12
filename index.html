@@ -46,10 +46,10 @@
 		}
 		body {
 			padding: 40px;
-			cursor: url('img/cursor.png'), auto;	
+			/*cursor: url('img/cursor.png'), auto;	*/
 		}
 		a:hover {
-			cursor: url('img/cursor-hover.png'), auto;	
+			/*cursor: pointer;	*/
 		}
 		header {
 			display: flex;
@@ -115,19 +115,21 @@
 			align-items: center;
 		}
 		.hero-headline {
-			letter-spacing: -0.03em;
-			color: #FFC6BA;
-			font-size: 156px;
+			color: #0047FF;
+			font-size: 100px;
 			font-family: 'Germania One';
-			background-image: linear-gradient(#FFEDE8 90%, #FFEDE8 35%);
+			letter-spacing: -0.03em;
+			line-height: .95;
+			/*background-image: linear-gradient(#FFEDE8 90%, #FFEDE8 35%);*/
 			display: inline;
+			/*filter: drop-shadow(5px 0px 0px #0047FF);*/
 		}
 		.hero-headline-first-line {
-			background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);
+			/*background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);*/
 		}
 		.hero-headline-spacing {
 			margin-left: 250px;
-			background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);
+			/*background-image: linear-gradient(#FFEDE8 90%, #0047FF 35%);*/
 		}
 		footer {
 			width: 100%;
@@ -181,13 +183,12 @@
 			color: #ffffff;
 		}
 		.arrow:hover {
-			cursor: url('img/cursor-hover.png'), auto;	
+			cursor: pointer;	
 		}
 		
 	    @media (max-width : 1045px) {
 	    	.hero-headline {
 		    	font-size: 100px;
-			    margin-top: 150px;
 		    }
 		    .hero-headline-spacing {
 			    margin-left: 0;
@@ -203,7 +204,7 @@
 				font-size: 13px;
 			}
 	    }
-	    @media (max-width : 600px) {
+	    @media (max-width : 630px) {
 	    	.hero-headline {
 		    	font-size: 75px;
 			    margin-top: 50px;
@@ -260,7 +261,7 @@
 				<h1 class="header-h1"><a class="header-h1-link" href="#">Eric Palmer</a></h1>
 				<nav>
 					<ul class="navigation">
-						<!--<li class="navigation-item"><a class="navigation-link" href="#"><strong>Video Reel</strong></a></li>-->
+						<li class="navigation-item"><a class="navigation-link" href="video-reel/">Video Reel</a></li>
 						<li class="navigation-item"><a class="navigation-link" href="set-photos/">Set Photos</a></li>
 						<li class="navigation-item"><a class="navigation-link" href="designs/">Designs</a></li>
 						<li class="navigation-item"><a class="navigation-link" href="about/">About</a></li>
@@ -269,7 +270,7 @@
 			</header>
 		
 			<section class="hero">
-				<h1 class="hero-headline"><span class="hero-headline-first-line">Los Angeles</span> <span class="hero-headline-spacing">Art Director</h1>
+				<h1 class="hero-headline">Four Seasons Total Los Angeles Art Director</h1>
 				<img id="openArrow" class="arrow" src="img/arrow.svg" alt="arrow" onclick="openNav()">
 			</section>
 			
@@ -282,7 +283,7 @@
 						<a class="footer-link" href="mailto:eric@losangelesartdirector.com">Email Me</a>
 					</div>
 				</div>
-				<img class="footer-img" src="img/lizard.svg" alt="Lizard illustration">
+				<a href="img/lizaaard.jpg"><img class="footer-img" src="img/lizard.svg" alt="Lizard illustration"></a>
 			</footer>
 		</section>
 		<script>
